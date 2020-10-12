@@ -16,7 +16,11 @@ public class PraktikumNo2 {
             Menit    = Jam % 60;
             Jam      = Jam / 60;
 
-        System.out.println(Jam + ":"+ Menit + ":"+ Detik);
+        System.out.printf("%02d", Jam);
+        System.out.printf(":");
+        System.out.printf("%02d", Menit);
+        System.out.printf(":");
+        System.out.printf("%02d", Detik);
 
 
 
