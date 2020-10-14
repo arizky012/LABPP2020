@@ -4,15 +4,14 @@ class TpNomor1{
     public static void main(String[] args) {
         Scanner x = new Scanner(System.in);
         double bensin;
-        float L = 14 ;
 
         System.out.println("masukkan jam dan Kecepatan");
-        float jam = x.nextFloat();
-        float kecepatan = x.nextFloat();
+        int jam = x.nextInt();
+        int kecepatan = x.nextInt();
 
-        bensin = ( jam * kecepatan ) / L;
+        bensin = ( jam * kecepatan ) / 14.0f;
 
-        System.out.printf("Bensin yang di gunankan : %.3f L", bensin);
+        System.out.printf("Bensin yang digunankan : %.3f L", bensin);
 
 
     }
