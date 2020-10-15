@@ -12,9 +12,7 @@ public class waktu {
         int a  = waktu % 3600;
         int menit = a / 60;
         int detik = a - (menit *60);
-
         
-        //System.out.println(jam);
         System.out.printf("%d:%d:%d\n" , jam, menit, detik);
         }
 }
