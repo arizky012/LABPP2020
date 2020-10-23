@@ -19,14 +19,14 @@ public class TugasPraktikum3 {
            System.out.printf("%2d.%d. CRUD User\n\n" , menuIndex,subMenuIndex);
     
           }
-           if (args[0].equals("Super Admin") && args[0].equals("Admin")){
+           if (args[0].equals("Super Admin") || args[0].equals("Admin")){
              menuIndex++;
              subMenuIndex=0; subMenuIndex++;
              System.out.printf("%d. Admin\n", menuIndex);
              System.out.printf("%2d.%d. CRUD Admin\n" , menuIndex,subMenuIndex);
              System.out.printf("%2d.%d. CRUD User\n\n", menuIndex,subMenuIndex);
            }
-           if (args[0].equals("Super Admin") && args[0].equals("Admin") && args[0].equals("User")){
+           if (args[0].equals("Super Admin") || args[0].equals("Admin") || args[0].equals("User")){
              menuIndex++;
              subMenuIndex=0; subMenuIndex++;
              System.out.printf("%d. User\n", menuIndex);
