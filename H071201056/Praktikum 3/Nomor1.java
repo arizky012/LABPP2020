@@ -2,31 +2,33 @@ import java.util.Scanner;
 public class Nomor1 {
     public static void main(String[] args) {
         Scanner inputan = new Scanner(System.in);
-        int x = inputan.nextInt();
+        int a = inputan.nextInt();
         System.out.println("masukkan nilai X");
-        int y = inputan.nextInt();
+        int b = inputan.nextInt();
         System.out.println("masukkan nilai Y");
         inputan.close();
-        int i, j;
-       
+        
+        int x = Math.min(a, b);
+        int y = Math.max(a, b);
 
-        while (i <= j) {
-            System.out.print(i+ " ");
-            if (i%2 == 0 && i != 0) {
+
+        while (x <= y) {
+            System.out.print(x+ " ");
+            if (x%2 == 0 && x != 0) {
                 System.out.printf("genap ");
 
-            } else if (i%2 != 0) {
+            } else if (x%2 != 0) {
                 System.out.print("ganjil ");
 
             } else System.out.print("nol\n");
 
-            if (i > 0) {  
+            if (x > 0) {  
                 System.out.print("positif\n");
             } else
-            if (i < 0) {  
+            if (x < 0) {  
                 System.out.print("negatif\n");
             }
-            i++;
+            x++;
 
         }
     
