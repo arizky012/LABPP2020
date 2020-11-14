@@ -13,9 +13,10 @@ public class Nomor3 {
         for (int count = 2; count < n; count++) {
             
             next  = a + b;
+            
+            System.out.print(" "+next );
             a = b;
             b = next ;
-            System.out.print(" "+next );
         }
     }
 }
