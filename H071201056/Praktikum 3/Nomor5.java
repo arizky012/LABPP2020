@@ -24,7 +24,7 @@ class Nomor5{
                     }
                     System.out.printf("%02d:%02d:%02d", hh,mm,ss);
                 }else{
-                    System.out.println("Inputan harus lebih dari 0 dan kurang dari");
+                    System.out.println("Inputan harus lebih dari 0 dan kurang dari 360");
                     ex.close();
                 }
             }
