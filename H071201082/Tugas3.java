@@ -12,10 +12,10 @@ public class Tugas3 {
          System.out.print(b);
 
         for (int i = 2;i < n;i++){
+            
             int next = a + b;
             System.out.print(" " + next);
             a = b;
             b = next;
         }
     }
-}
