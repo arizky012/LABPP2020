@@ -10,6 +10,7 @@ public class praktikum1nomor1 {
         double x = s*a;
         double bensin = x/efficiency;
 
-        System.out.println((String.format("%.3f", bensin)) + " L");
+        // System.out.println((String.format("%.3f", bensin)) + " L");
+        System.out.printf("%.3f L", bensin);
     }
 }
