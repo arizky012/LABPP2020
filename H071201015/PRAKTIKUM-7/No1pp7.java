@@ -69,15 +69,16 @@ import java.util.Map;
       }
       else if (op.equals("s")) {
         String src = inp.next();
-
+        boolean ada = false;
         for (int i = 1;i <= favMov.size() ;i++) {
-          if (favMov.get(i).contains(src)) {
+          if (favMov.get(i).toLowerCase().contains(src.toLowerCase())) {
             System.out.println("Hasil Pencarian : " + favMov.get(i));
+            ada = true;
           }
-          else {
-            System.out.println("Not Found!!!");
-            break;
-          }
+
+        }
+        if (ada == false) {
+          System.out.println("Not Found!!!");
         }
 
       }
