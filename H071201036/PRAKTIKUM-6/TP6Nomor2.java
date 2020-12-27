@@ -6,33 +6,33 @@ public class TP6Nomor2 {
         String kata = input.nextLine();
         input.close();
         String[][] array = new String[4][4];
-        if (kata.length() >= 16) {
-            kata = charCodePointAt(kata);
-            int count = 0;
-            int character = charArray(kata);
-            // Mengisi Array
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 4; j++) {
-                    array[i][j] = "";
-                    for (int k = 0; k < character; k++) {
-                        if (count < kata.length()) {
-                            array[i][j] += kata.charAt(count);
-                        } else {
-                            array[i][j] += '?';
-                        }
-                        count++;
+
+        kata = charCodePointAt(kata);
+        int count = 0;
+        int character = charArray(kata);
+        // Mengisi Array
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                array[i][j] = "";
+                for (int k = 0; k < character; k++) {
+                    if (count < kata.length()) {
+                        array[i][j] += kata.charAt(count);
+                    } else {
+                        array[i][j] += '?';
                     }
+                    count++;
                 }
-            }
-            // Print Array
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 4; j++) {
-                    System.out.print(array[i][j] + " ");
-                }
-                System.out.println();
             }
         }
+        // Print Array
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
+
     // Convert dengan metode Character.codePointAt(String, index)
     static String charCodePointAt(String a) {
         int hurufGanjil;
@@ -49,6 +49,7 @@ public class TP6Nomor2 {
         }
         return kataBaru;
     }
+
     // Menentukan banyak karakter tiap array
     static int charArray(String a) {
         int character = 0;
