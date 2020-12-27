@@ -10,8 +10,8 @@ public class TugasPraktikum7 {
         movie.put(1, "Avenger : Endgame");
         movie.put(2, "Spiderman : Far From Home");
         movie.put(3, "Venom");
-        movie.put(4, "Thor : Ragnarok");
-        printMovie(movie);
+        movie.put(4, "Thor : Ragnarok"); 
+        printMovie(movie); 
         System.out.println("(d)Detail (s)Search (a)Add (r)Remove");
         // Rilis
         Map<Integer, String> rilis = new HashMap<>();
@@ -46,7 +46,7 @@ public class TugasPraktikum7 {
 
         String lanjut = "y";
         while (lanjut.equalsIgnoreCase("y")) {
-            String pilihan = input.next();
+            String pilihan = input.next(); 
             switch (pilihan) {
                 // (d) Detail
                 case "d":
@@ -76,8 +76,9 @@ public class TugasPraktikum7 {
                 // (a) add
                 case "a":
                     System.out.println("=== Masukkan Data ===");
+                    System.out.print("Judul\t : ");
+                    input.nextLine();
                     String newMovie = input.nextLine();
-                    System.out.print("Judul\t :" + newMovie + "\n");
                     System.out.print("Rilis\t : ");
                     String newRilis = input.nextLine();
                     System.out.print("Durasi\t : ");
@@ -88,9 +89,9 @@ public class TugasPraktikum7 {
                     String newSinopsis = input.nextLine();
                     System.out.print("Cast\t : ");
                     String newCast = input.next();
-                    int count2 = movie.size();
-                    while (count2 < movie.size() + 1) {
-                        movie.put(count2, newMovie.substring(1));
+                    int count2 = movie.size() + 1;
+                    while (count2 < movie.size() + 2) {
+                        movie.put(count2, newMovie);
                         rilis.put(count2, newRilis);
                         durasi.put(count2, newDurasi);
                         genre.put(count2, newGenre);
@@ -107,14 +108,14 @@ public class TugasPraktikum7 {
                 // (r) Remove
                 case "r":
                     int movieRemove = input.nextInt();
-                    for (int i = movieRemove; i < movie.size(); i++) {
+                    for (int i = movieRemove; i < movie.size() + 1; i++) {
                         movie.replace(i, movie.get(i + 1));
                         rilis.replace(i, rilis.get(i + 1));
                         durasi.replace(i, durasi.get(i + 1));
                         genre.replace(i, genre.get(i + 1));
                         sinopsis.replace(i, sinopsis.get(i + 1));
                         cast.replace(i, cast.get(i + 1));
-                        if (i == movie.size() - 1) {
+                        if (i == movie.size()) {
                             movie.remove(movie.size());
                             rilis.remove(movie.size());
                         }
