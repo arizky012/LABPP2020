@@ -6,7 +6,7 @@ public class no2 {
         String kata = input.nextLine();
         String[][] array = new String[4][4];
 
-        if (kata.length() >= 16) {
+        if (kata.length() >= 0) {
             kata = charCodePointAt(kata);
             int count = 0;
             int character = charArray(kata);
