@@ -9,8 +9,8 @@ class no1 {
         String input = obj.next();
         String output = obj.next();
         try {
-            in = new FileInputStream("C:\\new\\" + input + ".txt");
-            out = new FileOutputStream("C:\\new\\" + output + ".txt");
+            in = new FileInputStream(".\\" + input + ".txt");
+            out = new FileOutputStream("C:\\Users\\asus\\Desktop\\LABPP2020\\H071201005\\PRAKTIKUM-8" + output + ".txt");
             int data;
             while ((data = in.read()) != -1) {
                 out.write(data);
