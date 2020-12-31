@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class no3 {
     public static void main(String[] args){
-        Scanner input = new Scanner(System.in)
+        Scanner input = new Scanner(System.in);
         int hari = input.nextInt();
         myDay(hari);
     }
