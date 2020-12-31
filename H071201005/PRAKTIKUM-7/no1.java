@@ -104,7 +104,7 @@ public class no1 {
 
     public static void search(String nama) {
         for (int x = 0; x < judul.size(); x++) {
-            if (judul.get(x).contains(nama)) {
+            if (judul.get(x).toLowerCase().contains(nama.toLowerCase())) {
                 System.out.println(x + 1 + ". " + judul.get(x));
             }
         }
