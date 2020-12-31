@@ -9,7 +9,7 @@ public class prak5no3 {
 
     public static void myDay(int nilai) {
         int tahun = nilai / 365;
-        int bulan = (nilai % 356) / 30;
+        int bulan = (nilai % 365) / 30;
         int hari = (nilai % 365) % 30;
 
         System.out.println(tahun + " Tahun");
