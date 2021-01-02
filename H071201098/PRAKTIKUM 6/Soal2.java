@@ -1,42 +1,40 @@
 import java.util.Scanner;
-public class Pemrograman06Nomor2 {
-  public static void main(String[] args) {
-    Scanner vina = new Scanner(System.in);
-    System.out.print("Masukkan Kalimat (Min.16 Karakter) = ");
-    String kalimat = vina.nextLine();
-    System.out.println("");
+public class Soal2{
+	public static void main (String[] args) {
+		Scanner inpt = new Scanner(System.in);
+		String kalimat_awal = inpt.nextLine();
+		String kalimat = new String();
+		for (int i=0; i<kalimat_awal.length(); i++) {
+		
+			if (i%2 == 0) {
+		  	kalimat += kalimat_awal.charAt(i);
+			} else {
+			  kalimat += kalimat_awal.codePointAt(i);
+			}
+		}
+		
+	int banyak = (int) Math.ceil((double)kalimat.length()/16);
+	   String[] kata = new String[16];
+	   System.out.println("banyak = "+ banyak+ " panjang="+ kalimat.length());
+	   int index = 0;
+		for (int i=0; i<16; i++) {
+			for (int j=0; j<banyak; j++) {
+				if (index < kalimat.length()) {
+					kata [i] += kalimat.charAt(index);
+				
+				} else {
+				  kata [i] += "?";
+				}
+				index++;
+			}
+		}
+		 for (int i=0; i<16; i++){
+			System.out.print(kata[i]+ " ");
+			if ((i+1)%4 == 0) {
+			  System.out.print("\n");
+			}
+		}
 
-    int matriks[][] = new int[4][4];
-    char[] kalimatToChar = kalimat.toCharArray();
-    String kata = "";
+	}
 
-    for(int i = 0; i < kalimatToChar.length; i ++){
-      if(i % 2 != 0){
-         int charToInt = (int) kalimatToChar[i];
-         kata += charToInt;
-      }
-      else{
-        kata += kalimatToChar[i];
-      }
-    }
-    char[] kataToChar = kata.toCharArray();
-    int jumlahKata = (int) Math.ceil(kataToChar.length / 16.0);
-    int banyakSpasi = 0;
-    for(int i = 0; i < jumlahKata * 16; i++){
-      if (i < kataToChar.length)
-        System.out.print(kataToChar[i]);
-      else
-        System.out.print('?');
-      if((i+1) % jumlahKata == 0){
-        if(banyakSpasi >= 3){
-          System.out.println();
-          banyakSpasi = 0;
-        }
-        else{
-          System.out.print(" ");
-          banyakSpasi++;
-        }
-      }
-    }
-  }
-} 
+}
